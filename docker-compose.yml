@@ -11,6 +11,7 @@ services:
 
     clickhouse-01:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-01
         container_name: clickhouse-01
         ports:
@@ -31,11 +32,11 @@ services:
 
     clickhouse-02:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-02
         container_name: clickhouse-02
         ports:
             - 9002:9000
-            - 8123:8123
         volumes:
                 - ./config/clickhouse_config.xml:/etc/clickhouse-server/config.xml
                 - ./config/clickhouse_metrika.xml:/etc/clickhouse-server/metrika.xml
@@ -51,11 +52,11 @@ services:
 
     clickhouse-03:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-03
         container_name: clickhouse-03
         ports:
             - 9003:9000
-            - 8123:8123
         volumes:
                 - ./config/clickhouse_config.xml:/etc/clickhouse-server/config.xml
                 - ./config/clickhouse_metrika.xml:/etc/clickhouse-server/metrika.xml
@@ -71,11 +72,11 @@ services:
 
     clickhouse-04:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-04
         container_name: clickhouse-04
         ports:
             - 9004:9000
-            - 8123:8123
         volumes:
                 - ./config/clickhouse_config.xml:/etc/clickhouse-server/config.xml
                 - ./config/clickhouse_metrika.xml:/etc/clickhouse-server/metrika.xml
@@ -91,11 +92,11 @@ services:
 
     clickhouse-05:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-05
         container_name: clickhouse-05
         ports:
             - 9005:9000
-            - 8123:8123
         volumes:
                 - ./config/clickhouse_config.xml:/etc/clickhouse-server/config.xml
                 - ./config/clickhouse_metrika.xml:/etc/clickhouse-server/metrika.xml
@@ -111,11 +112,11 @@ services:
 
     clickhouse-06:
         image: yandex/clickhouse-server
+        platform: linux/amd64
         hostname: clickhouse-06
         container_name: clickhouse-06
         ports:
             - 9006:9000
-            - 8123:8123
         volumes:
                 - ./config/clickhouse_config.xml:/etc/clickhouse-server/config.xml
                 - ./config/clickhouse_metrika.xml:/etc/clickhouse-server/metrika.xml
